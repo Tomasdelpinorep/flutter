@@ -1,12 +1,12 @@
 import 'result.dart';
 
-class Font {
+class FontResponse {
   int? totalCount;
   List<Result>? results;
 
-  Font({this.totalCount, this.results});
+  FontResponse({this.totalCount, this.results});
 
-  factory Font.fromJson(Map<String, dynamic> json) => Font(
+  factory FontResponse.fromJson(Map<String, dynamic> json) => FontResponse(
         totalCount: json['total_count'] as int?,
         results: (json['results'] as List<dynamic>?)
             ?.map((e) => Result.fromJson(e as Map<String, dynamic>))
